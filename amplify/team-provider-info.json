@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-pocamplifypchico-dev-101503-authRole",
+      "UnauthRoleArn": "arn:aws:iam::487354732760:role/amplify-pocamplifypchico-dev-101503-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::487354732760:role/amplify-pocamplifypchico-dev-101503-authRole",
+      "Region": "eu-west-3",
+      "DeploymentBucketName": "amplify-pocamplifypchico-dev-101503-deployment",
+      "UnauthRoleName": "amplify-pocamplifypchico-dev-101503-unauthRole",
+      "StackName": "amplify-pocamplifypchico-dev-101503",
+      "StackId": "arn:aws:cloudformation:eu-west-3:487354732760:stack/amplify-pocamplifypchico-dev-101503/3908ef20-bb62-11ee-9ccd-0e395785a3d8",
+      "AmplifyAppId": "d3utbdremmipk1"
+    }
+  }
+}
