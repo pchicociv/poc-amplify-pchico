@@ -54,6 +54,7 @@ namespace pocamplifypchicolambda1
                     }
                     context.Logger.LogLine($"Body: {request.Body}");
                     response.StatusCode = (int)HttpStatusCode.OK;
+                    response.Body = request.Body;
                     break;
                 case "PUT":
                     context.Logger.LogLine($"Put Request: {request.Path}\n");

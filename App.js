@@ -1,21 +1,43 @@
 import React, { useEffect, useState } from 'react';
-import { 
+import {
   StyleSheet,
   Text,
   View,
   TextInput,
   Pressable,
-  SafeAreaView } from 'react-native';
+  SafeAreaView
+} from 'react-native';
+
+import {
+  withAuthenticator,
+  useAuthenticator
+} from '@aws-amplify/ui-react-native';
 
 import { Amplify } from 'aws-amplify';
 import amplifyconfig from './src/amplifyconfiguration.json';
 
-import { post,generateClient  } from 'aws-amplify/api';
+import { post, generateClient } from 'aws-amplify/api';
 
 Amplify.configure(amplifyconfig);
 
+// retrieves only the current value of 'user' from 'useAuthenticator'
+const userSelector = (context) => [context.user];
+
+const SignOutButton = () => {
+  const { user, signOut } = useAuthenticator(userSelector);
+  return (
+    <Pressable onPress={signOut} style={styles.buttonContainer}>
+      <Text style={styles.buttonText}>
+        Hello, {user.username}! Click here to sign out!
+      </Text>
+    </Pressable>
+  );
+};
+
 const initialState = { name: '', description: '' };
 const client = generateClient();
+
+
 
 const App = () => {
 
@@ -23,7 +45,7 @@ const App = () => {
   const [todos, setTodos] = useState([]);
 
   useEffect(() => {
-   // fetchTodos();
+    // fetchTodos();
   }, []);
 
   function setInput(key, value) {
@@ -42,9 +64,7 @@ const App = () => {
         apiName: 'itemsApi',
         path: '/items',
         options: {
-          body: {
-            todo
-          }
+          body: todo
         }
       });
 
@@ -58,9 +78,13 @@ const App = () => {
     }
   }
 
+
+
   return (
+
     <SafeAreaView style={styles.container}>
       <View style={styles.container}>
+        <SignOutButton />
         <TextInput
           onChangeText={(value) => setInput('name', value)}
           style={styles.input}
@@ -87,7 +111,7 @@ const App = () => {
   );
 };
 
-export default App;
+export default withAuthenticator(App);
 
 const styles = StyleSheet.create({
   container: { width: 400, flex: 1, padding: 20, alignSelf: 'center' },

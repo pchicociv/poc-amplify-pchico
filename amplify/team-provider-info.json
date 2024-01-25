@@ -16,7 +16,7 @@
       "function": {
         "pocamplifypchicolambda1": {
           "deploymentBucketName": "amplify-pocamplifypchico-dev-101503-deployment",
-          "s3Key": "amplify-builds/pocamplifypchicolambda1-465a33334a4f30616170-build.zip"
+          "s3Key": "amplify-builds/pocamplifypchicolambda1-59624470646b395a7162-build.zip"
         }
       },
       "auth": {
