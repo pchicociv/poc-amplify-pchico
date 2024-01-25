@@ -9,14 +9,21 @@
       "UnauthRoleName": "amplify-pocamplifypchico-dev-101503-unauthRole",
       "StackName": "amplify-pocamplifypchico-dev-101503",
       "StackId": "arn:aws:cloudformation:eu-west-3:487354732760:stack/amplify-pocamplifypchico-dev-101503/3908ef20-bb62-11ee-9ccd-0e395785a3d8",
-      "AmplifyAppId": "d3utbdremmipk1"
+      "AmplifyAppId": "d3utbdremmipk1",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-pocamplifypchico-dev-101503-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
     },
     "categories": {
       "function": {
-        "pocamplifypchicolambda1": {}
+        "pocamplifypchicolambda1": {
+          "deploymentBucketName": "amplify-pocamplifypchico-dev-101503-deployment",
+          "s3Key": "amplify-builds/pocamplifypchicolambda1-465a33334a4f30616170-build.zip"
+        }
       },
       "auth": {
         "pocamplifypchico": {}
+      },
+      "api": {
+        "itemsApi": {}
       }
     }
   }

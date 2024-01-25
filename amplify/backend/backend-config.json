@@ -47,5 +47,23 @@
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
     }
+  },
+  "parameters": {
+    "AMPLIFY_function_pocamplifypchicolambda1_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "pocamplifypchicolambda1"
+        }
+      ]
+    },
+    "AMPLIFY_function_pocamplifypchicolambda1_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "pocamplifypchicolambda1"
+        }
+      ]
+    }
   }
 }
